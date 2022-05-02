@@ -3,7 +3,9 @@
 
 vspeed = 6;
 
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = 12;
+image_yscale = 4;
 
-alarm[0] = 2;
+// alarm[0] = 2;
+
+cores = choose(c_yellow, c_fuchsia, c_red, c_maroon);
