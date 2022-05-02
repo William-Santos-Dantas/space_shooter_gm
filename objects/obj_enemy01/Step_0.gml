@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-instance_destroy(other.id);
-instance_destroy();
+if(y > room_height + sprite_height)
+{
+	instance_destroy(id, false);
+}
