@@ -5,7 +5,6 @@ alarm[0] = room_speed;
 
 points = 0;
 level = 1;
-
 next_level = 100;
 
 ///@method earn_points(points)
@@ -19,3 +18,18 @@ earn_points = function(_point)
 	}
 }
 
+create_enemies = function()
+{
+	var x_random = irandom_range(64, room_width);
+	var y_random = -irandom_range(0, room_height);
+	var possibility = random_range(0, level);
+
+	var enemy = obj_enemy01;
+
+	if(possibility > 2)
+	{
+		enemy = obj_enemy02;
+	}
+
+	instance_create_layer(x_random, y_random, layer, enemy);
+}
