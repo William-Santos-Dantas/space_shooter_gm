@@ -6,3 +6,5 @@ if(instance_exists(obj_controller))
 {
 	obj_controller.earn_points(points);
 }
+
+drop_item(chance);

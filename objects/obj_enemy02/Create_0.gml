@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+chance = 30;
 can_move = true;
 
 shooting = function()

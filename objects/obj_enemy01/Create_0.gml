@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+chance = 20;
 
 if(place_meeting(x, y, obj_enemy01))
 {
@@ -20,3 +20,12 @@ alarm[0] = random_range(1, 3) * room_speed;
 
 points = 10;
 
+/// @method drop_item(chance)
+drop_item = function(_chance)
+{
+	var value = random(100);
+	if(value < _chance)
+	{
+		instance_create_layer(x, y, "Shoot", obj_power_up);
+	}
+}

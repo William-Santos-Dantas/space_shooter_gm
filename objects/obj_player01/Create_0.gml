@@ -63,3 +63,21 @@ shooting = function()
 	}
 
 }
+
+
+/// @method level_up(_chance)
+level_up = function(_chance)
+{
+	if(_chance >= 90 && shoot_level < 5)
+	{
+		shoot_level++;
+	}
+	else if(_chance >= 45 && shoot_wait > 20)
+	{
+		shoot_wait *= 0.9;
+	}
+	else if(ship_speed < 10)
+	{
+		ship_speed += 0.5;
+	}
+}
