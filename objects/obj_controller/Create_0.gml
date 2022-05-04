@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 alarm[0] = room_speed;
+game_over = noone;
 
 points = 0;
 level = 1;
@@ -21,7 +22,7 @@ earn_points = function(_point)
 create_enemies = function()
 {
 	var x_random = irandom_range(64, room_width);
-	var y_random = -irandom_range(0, room_height);
+	var y_random = irandom_range(0, -room_height - (level * 800));
 	var possibility = random_range(0, level);
 
 	var enemy = obj_enemy01;

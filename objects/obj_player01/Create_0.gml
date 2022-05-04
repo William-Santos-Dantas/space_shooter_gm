@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 life = 3;
+shield = 3;
 
 ship_speed = 5;
 
