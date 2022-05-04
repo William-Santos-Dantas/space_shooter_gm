@@ -6,5 +6,5 @@ if(instance_exists(obj_controller))
 {
 	obj_controller.earn_points(points);
 }
-
+screen_shake(10)
 drop_item(chance);

@@ -14,10 +14,15 @@ shoot_level = 1;
 /// @method
 lose_life = function()
 {
-	life--;
 	
-	if(life <= 0)
+	if(life > 1)
 	{
+		life--;
+		screen_shake(5)
+	}	
+	else
+	{
+		screen_shake(20)
 		instance_destroy();
 		
 	}

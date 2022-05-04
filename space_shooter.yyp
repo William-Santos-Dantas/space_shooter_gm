@@ -11,6 +11,7 @@
     {"id":{"name":"obj_shoot_impact","path":"objects/obj_shoot_impact/obj_shoot_impact.yy",},"order":0,},
     {"id":{"name":"spr_explosion","path":"sprites/spr_explosion/spr_explosion.yy",},"order":1,},
     {"id":{"name":"spr_shine_shoot_2","path":"sprites/spr_shine_shoot_2/spr_shine_shoot_2.yy",},"order":6,},
+    {"id":{"name":"screen_shake","path":"scripts/screen_shake/screen_shake.yy",},"order":0,},
     {"id":{"name":"obj_enemy02_shoot","path":"objects/obj_enemy02_shoot/obj_enemy02_shoot.yy",},"order":1,},
     {"id":{"name":"obj_player01_shoot","path":"objects/obj_player01_shoot/obj_player01_shoot.yy",},"order":1,},
     {"id":{"name":"obj_screen_shake","path":"objects/obj_screen_shake/obj_screen_shake.yy",},"order":3,},
