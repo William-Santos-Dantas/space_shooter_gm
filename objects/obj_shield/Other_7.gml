@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+image_speed = 0
+image_index = 2;
 
-instance_destroy();
-
-other.lose_life();
+alarm[0] = room_speed * 2;

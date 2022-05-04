@@ -1,11 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+life = 3;
+
 ship_speed = 5;
 
 shoot_wait = room_speed;
 
 shoot_level = 1;
+
+
+/// @method
+lose_life = function()
+{
+	life--;
+	
+	if(life <= 0)
+	{
+		instance_destroy();
+		
+	}
+	
+}
+
 
 shoot_02 = function()
 {
