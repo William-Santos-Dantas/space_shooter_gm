@@ -3,9 +3,20 @@
 
 if(!instance_exists(obj_enemy01))
 {
-	repeat(level * 10)
+	if(level < 10)
 	{
-		create_enemies();
+		repeat(level * 10)
+		{
+			create_enemies();
+		}
+	}else
+	{
+		if(!boss_fight)
+		{
+			boss_fight = true;
+			layer_sequence_create("boss_start", 992, 416, sq_boss_start);
+			audio_stop_all();
+		}
 	}
 }
 

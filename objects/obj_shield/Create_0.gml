@@ -10,3 +10,4 @@ if(target != noone || !instance_exists(target))
 }
 
 
+audio_play_sound(sfx_shieldUp, 1, false);

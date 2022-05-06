@@ -5,6 +5,8 @@ randomize();
 
 alarm[0] = room_speed;
 game_over = noone;
+boss_win = false;
+boss_fight = false;
 
 points = 0;
 level = 1;
@@ -13,7 +15,7 @@ next_level = 100;
 ///@method earn_points(points)
 earn_points = function(_point)
 {
-	points += _point;
+	points += _point * level;
 	if(points >= next_level)
 	{
 		level++;

@@ -10,23 +10,25 @@ shoot_wait = room_speed;
 
 shoot_level = 1;
 
+my_shield = noone;
+
 
 /// @method
 lose_life = function()
 {
-	
-	if(life > 1)
+	if(!my_shield)
 	{
-		life--;
-		screen_shake(5)
-	}	
-	else
-	{
-		screen_shake(20)
-		instance_destroy();
-		
+			if(life > 1)
+		{
+			life--;
+			screen_shake(5)
+		}	
+		else
+		{
+			screen_shake(20)
+			instance_destroy();
+		}
 	}
-	
 }
 
 
@@ -60,6 +62,7 @@ shooting = function()
 	
 	if(fire && alarm[0] == -1)
 	{
+		audio_play_sound(sfx_laser2, 1, false);
 		alarm[0] = shoot_wait;
 		if(shoot_level == 1)
 		{
@@ -91,16 +94,18 @@ shooting = function()
 /// @method level_up(_chance)
 level_up = function(_chance)
 {
-	if(_chance >= 90 && shoot_level < 5)
+	if(_chance >= 90)
 	{
-		shoot_level++;
+		if(shoot_level < 5) shoot_level++;
+		else if(instance_exists(obj_controller)) obj_controller.earn_points(100);
 	}
-	else if(_chance >= 45 && shoot_wait > 20)
+	else if(_chance >= 45)
 	{
-		shoot_wait *= 0.9;
+		if(shoot_wait > 20) shoot_wait *= 0.9;
+		else if(instance_exists(obj_controller)) obj_controller.earn_points(20);
 	}
 	else if(ship_speed < 10)
 	{
 		ship_speed += 0.5;
-	}
+	}else if(instance_exists(obj_controller)) obj_controller.earn_points(20);
 }

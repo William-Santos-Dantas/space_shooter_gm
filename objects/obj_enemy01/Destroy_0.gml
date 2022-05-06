@@ -8,3 +8,4 @@ if(instance_exists(obj_controller))
 }
 screen_shake(10)
 drop_item(chance);
+global.total_enemies++;
